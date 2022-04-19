@@ -1,9 +1,29 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for(let i = 0; i < array.length; i++){
+    let checkSum = target - array[i];
+    const newArray = array.filter(num => (num === checkSum))
+    console.log(newArray)
+    if(newArray.length > 0){
+      return true
+    }else{
+      return false
+    }
+  }
 }
+
+//   for(let i = 0; i < array.length + 1; i++) {
+//     for(let j = i+1; j < array.length + 1; j++)
+//     if(array[i] + array[j] === target){
+//       return true
+//     }
+//   }return false
+// }
 
 /* 
   Write the Big O time complexity of your function here
+
+
 */
 
 /* 
